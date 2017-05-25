@@ -1,0 +1,47 @@
+﻿@model SIGESF.Models.ConcessaoSuprimentoFundos
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Exclusão de dados de Concessão de Suprimento de Fundos</h2>
+
+<h3>Você tem certeza que deseja excluir os dados da concessão abaixo ?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AgenteSuprido.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AgenteSuprido.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrazoAplicacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrazoAplicacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrestadoContas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrestadoContas)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Apagar dados" class="btn btn-default" /> |
+            @Html.ActionLink("Retornar", "Index")
+        </div>
+    }
+</div>

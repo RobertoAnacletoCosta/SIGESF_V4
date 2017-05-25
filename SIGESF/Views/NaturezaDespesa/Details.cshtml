@@ -1,0 +1,33 @@
+﻿@model SIGESF.Models.NaturezaDespesa
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhe de item de Natureza de Despesa</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoDespesa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoDespesa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Atualizar", "Edit", new { id = Model.NaturezaDespesaId }) |
+    @Html.ActionLink("Retornar", "Index")
+</p>

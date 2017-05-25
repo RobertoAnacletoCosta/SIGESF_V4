@@ -1,0 +1,51 @@
+﻿@model IEnumerable<SIGESF.Models.ItemDeConcessao>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Manter Itens de Concessão</h2>
+
+<p>
+    @Html.ActionLink("Nova Concessão", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ConcessaoSuprimentoFundos.ConcessaoSuprimentoFundosId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NaturezaDespesa.CodigoDespesa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NaturezaDespesaId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Valor)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConcessaoSuprimentoFundos.ConcessaoSuprimentoFundosId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NaturezaDespesa.CodigoDespesa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NaturezaDespesaId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Valor)
+        </td>
+        <td>
+            @Html.ActionLink("Atualizar", "Edit", new { id=item.ItemDeConcessaoId }) |
+            @Html.ActionLink("Detalhar", "Details", new { id=item.ItemDeConcessaoId }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.ItemDeConcessaoId })
+        </td>
+    </tr>
+}
+
+</table>

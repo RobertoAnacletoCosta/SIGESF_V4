@@ -1,0 +1,41 @@
+﻿@model SIGESF.Models.ConcessaoSuprimentoFundos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes da Concessão de Suprimento de Fundos</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AgenteSuprido.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AgenteSuprido.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrazoAplicacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrazoAplicacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrestadoContas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrestadoContas)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ConcessaoSuprimentoFundosId }) |
+    @Html.ActionLink("Retornar", "Index")
+</p>

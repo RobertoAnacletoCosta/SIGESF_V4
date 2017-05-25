@@ -1,0 +1,45 @@
+﻿@model IEnumerable<SIGESF.Models.ConcessaoSuprimentoFundos>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Manter dados de Concessão de Suprimento de Fundos</h2>
+
+<p>
+    @Html.ActionLink("Nova Concessão", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AgenteSuprido.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrazoAplicacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrestadoContas)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.AgenteSuprido.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrazoAplicacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrestadoContas)
+        </td>
+        <td>
+            @Html.ActionLink("Atualizar", "Edit", new { id=item.ConcessaoSuprimentoFundosId }) |
+            @Html.ActionLink("Detalhar", "Details", new { id=item.ConcessaoSuprimentoFundosId }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.ConcessaoSuprimentoFundosId })
+        </td>
+    </tr>
+}
+
+</table>

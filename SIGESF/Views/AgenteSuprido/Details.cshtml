@@ -1,0 +1,50 @@
+﻿@model SIGESF.Models.AgenteSuprido
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes do cadastro</h2>
+
+<div>
+    <h4>Agente Suprido</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Matricula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Matricula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Unidades)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Unidades)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.AgenteSupridoId }) |
+    @Html.ActionLink("Retornar", "Index")
+</p>

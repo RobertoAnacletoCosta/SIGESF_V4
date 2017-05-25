@@ -1,0 +1,56 @@
+﻿@model SIGESF.Models.AgenteSuprido
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Deletar dados</h2>
+
+<h3>Você tem certeza que deseja deletar os dados selecionados ?</h3>
+<div>
+    <h4>Agentes Supridos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Matricula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Matricula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Unidades)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Unidades)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Confirmar Exclusão do Agente Suprido" class="btn btn-default" /> |
+            @Html.ActionLink("Retornar", "Index")
+        </div>
+    }
+</div>

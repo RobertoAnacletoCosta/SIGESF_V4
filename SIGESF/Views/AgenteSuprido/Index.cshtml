@@ -1,0 +1,68 @@
+﻿@using PagedList.Mvc;
+@model PagedList.IPagedList<SIGESF.Models.AgenteSuprido>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Cadastro de Agentes Supridos</h2>
+
+<p>
+    @Html.ActionLink("Adicionar novo Agente Suprido", "Create")
+</p>
+
+@using (Html.BeginForm("Index","AgenteSuprido",FormMethod.Get))
+{
+    <p>
+        Procura por Nome : @Html.TextBox("SearchString")
+        <input type="submit" value="Busca" />
+    </p>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.ActionLink("Nome", "Index", new { sortOrder = ViewBag.NomeParam })
+        </th>
+        <th>
+            @Html.ActionLink("Matricula", "Index", new { sortOrder = ViewBag.MatriculaParam })
+        </th>
+        <th>
+            CPF
+        </th>
+        <th>
+            @Html.ActionLink("Unidade", "Index", new { sortOrder = ViewBag.UnidadeParam })
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Matricula)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CPF)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Unidades)
+            </td>
+            <td>
+                @Html.ActionLink("Atualizar", "Edit", new { id = item.AgenteSupridoId }) |
+                @Html.ActionLink("Detalhar", "Details", new { id = item.AgenteSupridoId }) |
+                @Html.ActionLink("Excluir", "Delete", new { id = item.AgenteSupridoId })
+            </td>
+        </tr>
+    }
+
+</table>
+
+Pagina @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) de @Model.PageCount
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort
+    ,currenteFilter = ViewBag.CurrenteFilter}))
