@@ -7,7 +7,7 @@ using SIGESF.Models;
 using PagedList;
 using System;
 
-namespace SIGESF.Controllers
+namespace Areas.Administracao.Controllers
 {
     public class AgenteSupridoController : Controller
     {

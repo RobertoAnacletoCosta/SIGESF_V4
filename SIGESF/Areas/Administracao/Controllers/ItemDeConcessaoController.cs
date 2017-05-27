@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using SIGESF.Models;
 
-namespace SIGESF.Controllers
+namespace Areas.Administracao.Controllers
 {
     public class ItemDeConcessaoController : Controller
     {
