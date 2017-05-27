@@ -511,6 +511,7 @@
     <Content Include="Areas\Administracao\Views\UIElements\Typography.cshtml" />
     <Content Include="Areas\Administracao\Views\Widgets\Index.cshtml" />
     <Content Include="Areas\Administracao\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Administracao\Views\Shared\NavigatorBarList - Cópia .cshtml" />
     <None Include="Scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="Scripts\jquery-1.12.4.js" />
     <Content Include="Scripts\jquery-1.12.4.min.js" />
