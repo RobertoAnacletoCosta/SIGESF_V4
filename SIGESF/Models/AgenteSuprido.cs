@@ -24,7 +24,7 @@ namespace SIGESF.Models
         public string Matricula { get; set; }
 
         [Required(ErrorMessage = "Obrigatório informar o CPF")]
-        [StringLength(11, ErrorMessage = "Máximo de 11 caracteres")]
+        [StringLength(14, ErrorMessage = "Máximo de 11 caracteres")]
         [Display(Name = "CPF")]
         public string CPF { get; set; }
 
