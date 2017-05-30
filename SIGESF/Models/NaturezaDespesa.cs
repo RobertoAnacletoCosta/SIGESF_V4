@@ -9,11 +9,12 @@ namespace SIGESF.Models
 {
     public class NaturezaDespesa
     {
-        [Key, ForeignKey("ItemDeConcessao")]
+        [Key]
         public int NaturezaDespesaId { get; set; }
-        public string CodigoDespesa { get; set; }
+
+        //Na descrição: Ex.: 339030 - Material de consumo
         public string Descricao { get; set; }
-        public virtual ItemDeConcessao ItemDeConcessao { get; set; }
-        //public virtual ICollection<ItemDeConcessao> ItensSF { get; set; }
+
+        public virtual ICollection<DetalheConcessaoAplicacaoSF> DetalhesSF { get; set; }
     }
 }

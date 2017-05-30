@@ -1,0 +1,71 @@
+﻿@model SIGESF.Models.DetalheConcessaoAplicacaoSF
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Deletar itens de concessão</h2>
+
+<h3>Você tem certeza que deseja excluir o item selecionado?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ConcessaoSuprimentoFundos.Proc_Proad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConcessaoSuprimentoFundos.Proc_Proad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NaturezasDespesas.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NaturezasDespesas.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorConcedido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorConcedido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorAplicado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorAplicado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DevolucaoSaque)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DevolucaoSaque)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorNaoUtilizado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorNaoUtilizado)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Confirmar exclusão" class="btn btn-default" /> |
+            @Html.ActionLink("Retornar", "Index")
+        </div>
+    }
+</div>

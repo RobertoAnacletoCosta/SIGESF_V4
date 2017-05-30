@@ -1,0 +1,64 @@
+﻿@model SIGESF.Models.DetalheConcessaoAplicacaoSF
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes de itens de concessão</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ConcessaoSuprimentoFundos.Proc_Proad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ConcessaoSuprimentoFundos.Proc_Proad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NaturezasDespesas.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NaturezasDespesas.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorConcedido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorConcedido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorAplicado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorAplicado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DevolucaoSaque)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DevolucaoSaque)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorNaoUtilizado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorNaoUtilizado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.DetConcAplicId }) |
+    @Html.ActionLink("Retornar", "Index")
+</p>

@@ -17,7 +17,7 @@ namespace Areas.Administracao.Controllers
         // GET: ConcessaoSuprimentoFundos
         public ActionResult Index()
         {
-            var concessoes = db.Concessoes.Include(c => c.AgenteSuprido);
+            var concessoes = db.ConcessoesSF.Include(c => c.AgenteSuprido);
             return View(concessoes.ToList());
         }
 
@@ -28,7 +28,7 @@ namespace Areas.Administracao.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ConcessaoSuprimentoFundos concessaoSuprimentoFundos = db.Concessoes.Find(id);
+            ConcessaoSuprimentoFundos concessaoSuprimentoFundos = db.ConcessoesSF.Find(id);
             if (concessaoSuprimentoFundos == null)
             {
                 return HttpNotFound();
@@ -52,7 +52,7 @@ namespace Areas.Administracao.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Concessoes.Add(concessaoSuprimentoFundos);
+                db.ConcessoesSF.Add(concessaoSuprimentoFundos);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -68,7 +68,7 @@ namespace Areas.Administracao.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ConcessaoSuprimentoFundos concessaoSuprimentoFundos = db.Concessoes.Find(id);
+            ConcessaoSuprimentoFundos concessaoSuprimentoFundos = db.ConcessoesSF.Find(id);
             if (concessaoSuprimentoFundos == null)
             {
                 return HttpNotFound();
@@ -101,7 +101,7 @@ namespace Areas.Administracao.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            ConcessaoSuprimentoFundos concessaoSuprimentoFundos = db.Concessoes.Find(id);
+            ConcessaoSuprimentoFundos concessaoSuprimentoFundos = db.ConcessoesSF.Find(id);
             if (concessaoSuprimentoFundos == null)
             {
                 return HttpNotFound();
@@ -114,8 +114,8 @@ namespace Areas.Administracao.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            ConcessaoSuprimentoFundos concessaoSuprimentoFundos = db.Concessoes.Find(id);
-            db.Concessoes.Remove(concessaoSuprimentoFundos);
+            ConcessaoSuprimentoFundos concessaoSuprimentoFundos = db.ConcessoesSF.Find(id);
+            db.ConcessoesSF.Remove(concessaoSuprimentoFundos);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

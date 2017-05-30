@@ -194,7 +194,7 @@
     <Compile Include="Areas\Administracao\Controllers\AgenteSupridoController.cs" />
     <Compile Include="Areas\Administracao\Controllers\ConcessaoSuprimentoFundosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Areas\Administracao\Controllers\ItemDeConcessaoController.cs" />
+    <Compile Include="Areas\Administracao\Controllers\DetalheConcessaoAplicacaoSFController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Areas\Administracao\Controllers\NaturezaDespesaController.cs" />
     <Compile Include="DiagramaDeClasse\DiagramaDeClasse.cs" />
@@ -211,7 +211,7 @@
     <Compile Include="Models\AgenteSuprido.cs" />
     <Compile Include="Models\ConcessaoSuprimentoFundos.cs" />
     <Compile Include="Models\ContextoEF.cs" />
-    <Compile Include="Models\ItemDeConcessao.cs" />
+    <Compile Include="Models\DetalheConcessaoAplicacaoSF.cs" />
     <Compile Include="Models\NaturezaDespesa.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -594,11 +594,11 @@
     <Content Include="Areas\Administracao\Views\NaturezaDespesa\Details.cshtml" />
     <Content Include="Areas\Administracao\Views\NaturezaDespesa\Edit.cshtml" />
     <Content Include="Areas\Administracao\Views\NaturezaDespesa\Index.cshtml" />
-    <Content Include="Areas\Administracao\Views\ItemDeConcessao\Create.cshtml" />
-    <Content Include="Areas\Administracao\Views\ItemDeConcessao\Delete.cshtml" />
-    <Content Include="Areas\Administracao\Views\ItemDeConcessao\Details.cshtml" />
-    <Content Include="Areas\Administracao\Views\ItemDeConcessao\Edit.cshtml" />
-    <Content Include="Areas\Administracao\Views\ItemDeConcessao\Index.cshtml" />
+    <Content Include="Areas\Administracao\Views\DetalheConcessaoAplicacaoSF\Create.cshtml" />
+    <Content Include="Areas\Administracao\Views\DetalheConcessaoAplicacaoSF\Delete.cshtml" />
+    <Content Include="Areas\Administracao\Views\DetalheConcessaoAplicacaoSF\Details.cshtml" />
+    <Content Include="Areas\Administracao\Views\DetalheConcessaoAplicacaoSF\Edit.cshtml" />
+    <Content Include="Areas\Administracao\Views\DetalheConcessaoAplicacaoSF\Index.cshtml" />
     <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="vendor\bootstrap\fonts\glyphicons-halflings-regular.woff" />

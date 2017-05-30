@@ -1,0 +1,62 @@
+﻿@model IEnumerable <SIGESF.Models.DetalheConcessaoAplicacaoSF>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Manter Itens de Concessão</h2>
+
+<p>
+    @Html.ActionLink("Nova Concessão", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ConcessaoSuprimentoFundos.Proc_Proad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NaturezasDespesas.Descricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorConcedido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorAplicado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DevolucaoSaque)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorNaoUtilizado)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ConcessaoSuprimentoFundos.Proc_Proad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NaturezasDespesas.Descricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValorConcedido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValorAplicado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DevolucaoSaque)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValorNaoUtilizado)
+        </td>
+        <td>
+            @Html.ActionLink("Atualizar", "Edit", new { id = item.DetConcAplicId }) |
+            @Html.ActionLink("Detalhar", "Details", new { id = item.DetConcAplicId }) |
+            @Html.ActionLink("Excluir", "Delete", new { id = item.DetConcAplicId })
+        </td>
+    </tr>
+}
+
+</table>
