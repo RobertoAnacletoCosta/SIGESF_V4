@@ -43,8 +43,14 @@ namespace SIGESF.Migrations
             new AgenteSuprido { Nome = "Alisson Barroso", Matricula = "308.23.024", CPF = "98711111999" },
             new AgenteSuprido { Nome = "Evandro Leitão", Matricula = "308.23.025", CPF = "98765432176" }
             );
-            
 
+            context.NaturezaDespesa.AddOrUpdate(n => n.Descricao,
+            new NaturezaDespesa { Descricao = "339030 - Material de Consumo" },
+            new NaturezaDespesa { Descricao = "339036 - Outros Serviços de Terceiros Pessoa Física" },
+            new NaturezaDespesa { Descricao = "339039 - Outros Serviços de Terceiros Pessoa Jurídica" },
+            new NaturezaDespesa { Descricao = "449052 - Equipamentos e Material Permanente" },
+            new NaturezaDespesa { Descricao = "339157 - Despesas Tributárias e Contributivas" }
+            );
         }
     }
 }
