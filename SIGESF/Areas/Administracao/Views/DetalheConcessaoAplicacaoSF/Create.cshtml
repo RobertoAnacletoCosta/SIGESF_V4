@@ -4,7 +4,7 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Nova Concessão</h2>
+<h2>Manter Detalhes da Nova Concessão</h2>
 
 @using (Html.BeginForm()) 
 {
@@ -69,4 +69,16 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquerymask")
+
+    <script>
+
+        $(document).ready(function () {
+
+            //$("#ValorConcedido,#ValorAplicado,#DevolucaoSaque,#ValorNaoUtilizado").mask("R$ 99.999,99");
+
+        });
+
+
+</script>
 }
