@@ -21,7 +21,7 @@ namespace SIGESF.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("StrConnection", throwIfV1Schema: false)
         {
         }
 
