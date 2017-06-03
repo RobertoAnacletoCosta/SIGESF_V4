@@ -11,7 +11,7 @@ namespace SIGESF.Controllers
         [AllowAnonymous]
         public ActionResult Index()
         {
-            //DiagramaDeClasse.DiagramaDeClasse.GerarDiagrama();
+            DiagramaDeClasse.DiagramaDeClasse.GerarDiagrama();
             return View();
         }
 

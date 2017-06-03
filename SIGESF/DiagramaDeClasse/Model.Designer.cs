@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Roberto\Documents\Visual Studio 2015\Projects\SIGESF_v3_17-11-2016\SIGESF\DiagramaDeClasse\Model.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Roberto\Source\Repos\SIGESF_V4\SIGESF\DiagramaDeClasse\Model.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

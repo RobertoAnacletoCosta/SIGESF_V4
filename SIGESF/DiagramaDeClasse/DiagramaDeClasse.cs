@@ -15,7 +15,7 @@ namespace SIGESF.DiagramaDeClasse
         {
             using (var ctx = new ContextoEF())
             {
-                using (var writer = new XmlTextWriter(@"C:\Users\Roberto\Documents\Visual Studio 2015\Projects\SIGESF_v3_17-11-2016\SIGESF\DiagramaDeClasse\Model.edmx", Encoding.Default))
+                using (var writer = new XmlTextWriter(@"C:\Users\Roberto\Source\Repos\SIGESF_V4\SIGESF\DiagramaDeClasse\Model.edmx", Encoding.Default))
                 {
                     EdmxWriter.WriteEdmx(ctx, writer);
                 }
