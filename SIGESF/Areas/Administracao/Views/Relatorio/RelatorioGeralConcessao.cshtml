@@ -1,0 +1,74 @@
+﻿@model IEnumerable<SIGESF.ViewModels.RelatorioGeralConcessaoViewModel>
+
+@{
+    ViewBag.Title = "Relatório Geral de Concessões";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Matricula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PROAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumSFApropriacao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NaturezaDesesa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorConcedido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorAplicado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DevolucaoSaque)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorNaoUtilizado)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Matricula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PROAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumSFApropriacao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NaturezaDesesa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValorConcedido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValorAplicado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DevolucaoSaque)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValorNaoUtilizado)
+        </td>
+
+    </tr>
+}
+
+</table>

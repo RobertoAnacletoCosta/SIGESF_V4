@@ -18,7 +18,7 @@ namespace SIGESF.Models
         public DateTime DataConcessao { get; set; }
 
         [Display(Name = "Nº SF de Apropriação")]
-        public DateTime SF_Apropriacao { get; set; }
+        public string SF_Apropriacao { get; set; }
 
         [Display(Name = "Prazo de Aplicação")]
         public int PrazoAplicacao { get; set; }
