@@ -29,10 +29,9 @@ namespace Areas.Administracao.Controllers
                 select new RelatorioGeralConcessaoViewModel
                 {
 
-                    Nome = a.Nome,
-                    Matricula = a.Matricula,
-                    PROAD = c.Proc_Proad,
                     NumSFApropriacao = c.SF_Apropriacao,
+                    PROAD = c.Proc_Proad,
+                    Nome = a.Nome,
                     NaturezaDesesa = nd.Descricao,
                     ValorConcedido = d.ValorConcedido,
                     ValorAplicado = d.ValorAplicado,
