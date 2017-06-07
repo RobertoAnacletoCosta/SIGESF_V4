@@ -1,9 +1,6 @@
 ﻿using SIGESF.Models;
 using SIGESF.ViewModels;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Areas.Administracao.Controllers
@@ -32,6 +29,13 @@ namespace Areas.Administracao.Controllers
                     NumSFApropriacao = c.SF_Apropriacao,
                     PROAD = c.Proc_Proad,
                     Nome = a.Nome,
+                    DataConcessao = c.DataConcessao,
+                    PrazoAplicacao = c.PrazoAplicacao,
+                    DataFinalAplicacao = c.DataFinalAplicacao,
+                    PrazoPrestContas = c.PrazoPrestContas,
+                    PrestadoContas = c.PrestadoContas,
+                    DataPrestContas = c.DataPrestContas,
+                    Finalidade = c.Finalidade,
                     NaturezaDesesa = nd.Descricao,
                     ValorConcedido = d.ValorConcedido,
                     ValorAplicado = d.ValorAplicado,
