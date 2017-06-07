@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SIGESF.Models;
+using System;
 
 namespace SIGESF.ViewModels
 {
@@ -7,6 +8,7 @@ namespace SIGESF.ViewModels
         public string NumSFApropriacao { get; set; }
         public string PROAD { get; set; }
         public string Nome { get; set; }
+        public Unidade UnidadeLotacao { get; set; }
         public DateTime DataConcessao { get; set; }
         public int PrazoAplicacao { get; set; }
         public DateTime DataFinalAplicacao { get; set; }

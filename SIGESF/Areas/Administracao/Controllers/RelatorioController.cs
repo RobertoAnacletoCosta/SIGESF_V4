@@ -29,6 +29,7 @@ namespace Areas.Administracao.Controllers
                     NumSFApropriacao = c.SF_Apropriacao,
                     PROAD = c.Proc_Proad,
                     Nome = a.Nome,
+                    UnidadeLotacao = a.Unidades,
                     DataConcessao = c.DataConcessao,
                     PrazoAplicacao = c.PrazoAplicacao,
                     DataFinalAplicacao = c.DataFinalAplicacao,
