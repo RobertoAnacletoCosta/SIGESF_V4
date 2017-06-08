@@ -15,9 +15,16 @@ namespace SIGESF.Models
         public virtual NaturezaDespesa NaturezasDespesas { get; set; }
         public int NaturezaDespesaId { get; set; }
 
+        [Display(Name = "Valor concedido")]
         public decimal ValorConcedido { get; set; }
+
+        [Display(Name = "Valor aplicado")]
         public decimal ValorAplicado { get; set; }
+
+        [Display(Name = "Devolução de saque")]
         public decimal DevolucaoSaque { get; set; }
+
+        [Display(Name = "Valor não utilizado")]
         public decimal ValorNaoUtilizado { get; set; }
     }
 }
