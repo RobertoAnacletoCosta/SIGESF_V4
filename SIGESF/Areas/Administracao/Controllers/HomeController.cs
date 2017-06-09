@@ -9,18 +9,8 @@ namespace Areas.Administracao.Controllers
     //[Authorize(Roles = "Administrador")]
     public class HomeController : Controller
     {
-        [Authorize(Roles = "Adinistrador")]
+        [Authorize]
         public ActionResult Index()
-        {
-            return View();
-        }
-        [AllowAnonymous]
-        public ActionResult Detalhes()
-        {
-            return View();
-        }
-        [Authorize(Roles = "Usuário")]
-        public ActionResult Usuarios()
         {
             return View();
         }

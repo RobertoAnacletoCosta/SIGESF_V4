@@ -53,22 +53,12 @@
                         <a href="#page-top"></a>
                     </li>
 
-                    @*Restringir acesso somente ao Adminisrador*@
-                    @if (Request.IsAuthenticated)
-                    {
-                        if (User.IsInRole("Administrador"))
-                        {
+                    
                     <li>
                         <a class="page-scroll" href="@Url.Action("Index","Home")">Home</a>
                     </li>
-                        }
-                    }
 
-                    @*Restringir acesso somente ao Usuario*@
-                    @if (Request.IsAuthenticated)
-                    {
-                        if (User.IsInRole("Usuário"))
-                        {
+                    
                             <li>
                                 <a class="page-scroll" href="@Url.Action("Index","AgenteSuprido")">Supridos</a>
                             </li>
@@ -81,8 +71,6 @@
                             <li>
                                 <a class="page-scroll" href="@Url.Action("Index","NaturezaDespesa")">Natureza da Despesa</a>
                             </li>
-                        }
-                    }
                 </ul>
 
                 <!-- Chama arquivo parcial de links de entrar(LogIn) e sair(LogOut/LogOff) -->
