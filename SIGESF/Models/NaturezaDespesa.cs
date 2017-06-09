@@ -16,5 +16,6 @@ namespace SIGESF.Models
         public string Descricao { get; set; }
 
         public virtual ICollection<DetalheConcessaoAplicacaoSF> DetalhesSF { get; set; }
+        public virtual ICollection<DetalheSolicitacaoSuprimentoFundos> DetalheSolicitacoes { get; set; }
     }
 }

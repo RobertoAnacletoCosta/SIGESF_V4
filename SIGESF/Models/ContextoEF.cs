@@ -17,6 +17,8 @@ namespace SIGESF.Models
         public DbSet<ConcessaoSuprimentoFundos> ConcessoesSF { get; set; }
         public DbSet<DetalheConcessaoAplicacaoSF> DetalhesSF { get; set; }
         public DbSet<NaturezaDespesa> NaturezaDespesa { get; set; }
+        public DbSet<SolicitacaoSuprimentoFundos> SolicitacoesSF { get; set; }
+        public DbSet<DetalheSolicitacaoSuprimentoFundos> DetalheSolicitacoes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

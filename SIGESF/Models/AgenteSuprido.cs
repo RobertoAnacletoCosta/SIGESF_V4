@@ -31,6 +31,9 @@ namespace SIGESF.Models
         [Required(ErrorMessage = "Obrigatório informar a Unidade")]
         [Display(Name = "Unidade")]
         public Unidade Unidades { get; set; }
+
         public virtual ICollection<ConcessaoSuprimentoFundos> ConcessoesSF { get; set; }
+        public virtual ICollection<SolicitacaoSuprimentoFundos> SolicitacoesSF { get; set; }
+
     }
 }

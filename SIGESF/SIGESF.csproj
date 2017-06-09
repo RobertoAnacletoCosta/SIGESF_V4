@@ -213,9 +213,11 @@
     <Compile Include="Models\ConcessaoSuprimentoFundos.cs" />
     <Compile Include="Models\ContextoEF.cs" />
     <Compile Include="Models\DetalheConcessaoAplicacaoSF.cs" />
+    <Compile Include="Models\DetalheSolicitacaoSuprimentoFundos.cs" />
     <Compile Include="Models\NaturezaDespesa.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\SolicitacaoSuprimentoFundos.cs" />
     <Compile Include="Models\Unidade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
