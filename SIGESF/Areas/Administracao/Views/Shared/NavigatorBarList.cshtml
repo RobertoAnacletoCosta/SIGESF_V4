@@ -1,7 +1,7 @@
 ﻿<ul class="nav nav-list">
     
-    @if (User.IsInRole("Administrador"))
-    {
+    @*@if (User.IsInRole("Administrador"))
+    {*@
     <li class="">
         <a href="@Url.Action("Index", "Home")">
             <i class="menu-icon fa fa-pencil"></i>
@@ -76,5 +76,5 @@
             </li>
         </ul>
     </li>
-    }
+    @*}*@
 </ul><!-- /.nav-list -->
