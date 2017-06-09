@@ -260,3 +260,4 @@ paket-files/
 __pycache__/
 *.pyc
 /SIGESF/img
+/SIGESF/Areas/Administracao/Controllers

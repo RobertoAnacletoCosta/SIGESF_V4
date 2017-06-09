@@ -1,0 +1,98 @@
+﻿@model SIGESF.Models.ConcessaoSuprimentoFundos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ConcessaoSuprimentoFundos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AgenteSuprido.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AgenteSuprido.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Proc_Proad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Proc_Proad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataConcessao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataConcessao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SF_Apropriacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SF_Apropriacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrazoAplicacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrazoAplicacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataFinalAplicacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataFinalAplicacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrazoPrestContas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrazoPrestContas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrestadoContas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrestadoContas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataPrestContas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataPrestContas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Finalidade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Finalidade)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ConcessaoSuprimentoFundosId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
