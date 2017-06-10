@@ -223,6 +223,7 @@
     <Compile Include="Models\Unidade.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\RelatorioGeralAgentesSupridosViewModel.cs" />
     <Compile Include="ViewModels\RelatorioGeralConcessaoViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -522,6 +523,7 @@
     <Content Include="Areas\Administracao\Views\Home\Usuarios.cshtml" />
     <Content Include="QuerysLinq\Query_SIGESF.linq" />
     <Content Include="Areas\Administracao\Views\Relatorio\RelatorioGeralConcessao.cshtml" />
+    <Content Include="Areas\Administracao\Views\Relatorio\RelatorioGeralAgentesSupridos.cshtml" />
     <Content Include="Areas\Administracao\Views\SolicitacaoSuprimentoFundos\Create.cshtml" />
     <Content Include="Areas\Administracao\Views\SolicitacaoSuprimentoFundos\Delete.cshtml" />
     <Content Include="Areas\Administracao\Views\SolicitacaoSuprimentoFundos\Details.cshtml" />
