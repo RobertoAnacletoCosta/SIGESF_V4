@@ -44,14 +44,14 @@
             <li class="">
                 <a href="@Url.Action("Index","ConcessaoSuprimentoFundos")">
                     <i class="menu-icon fa fa-caret-right"></i>
-                    <span class="menu-text"> Concessao SF </span>
+                    <span class="menu-text"> Manter Concessao SF </span>
                 </a>
             </li>
 
             <li class="">
                 <a href="@Url.Action("Index","DetalheConcessaoAplicacaoSF")">
                     <i class="menu-icon fa fa-caret-right"></i>
-                    <span class="menu-text"> Detalhes Concessão </span>
+                    <span class="menu-text"> Manter Detalhes Concessão </span>
                 </a>
             </li>
         </ul>
@@ -70,11 +70,44 @@
         <ul class="submenu">
             <li class="">
                 <a href="@Url.Action("Index","NaturezaDespesa")">
-                    <i class="menu-icon fa fa-dollar"></i>
+                    <i class="menu-icon fa fa-caret-right"></i>
                     <span class="menu-text"> Cadastro Nat Despesa </span>
                 </a>
             </li>
         </ul>
+    </li>
+
+    <li class="">
+        <a href="#" class="dropdown-toggle">
+            <i class="menu-icon fa fa-print"></i>
+            <span class="menu-text"> Relatórios </span>
+
+            <b class="arrow fa fa-angle-down"></b>
+        </a>
+
+        <b class="arrow"></b>
+
+        <ul class="submenu">
+            <li class="">
+                <a href="@Url.Action("Index","AgenteSuprido")">
+                    <i class="menu-icon fa fa-caret-right"></i>
+                    <span class="menu-text"> Relação de Supridos </span>
+                </a>
+            </li>
+
+            <li class="">
+                <a href="@Url.Action("RelatorioGeralConcessao","Relatorio")">
+                    <i class="menu-icon fa fa-caret-right"></i>
+                    <span class="menu-text"> Relação de Concessões </span>
+                </a>
+            </li>
+
+            <li class="">
+                <a href="@Url.Action("Index","SolicitacaoSuprimentoFundos")">
+                    <i class="menu-icon fa fa-caret-right"></i>
+                    <span class="menu-text"> Relação de Solicitações </span>
+                </a>
+            </li>
     </li>
     @*}*@
 </ul><!-- /.nav-list -->
