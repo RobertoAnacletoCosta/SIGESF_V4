@@ -40,7 +40,7 @@ namespace Areas.Administracao.Controllers
         public ActionResult Create()
         {
             ViewBag.ConcessaoSuprimentoFundosId = new SelectList(db.ConcessoesSF, "ConcessaoSuprimentoFundosId", "Proc_Proad");
-            ViewBag.NaturezaDespesaId = new SelectList(db.NaturezaDespesa, "NaturezaDespesaId", "Descricao");
+            ViewBag.NaturezaDespesaId = new SelectList(db.NaturezasDespesas, "NaturezaDespesaId", "Descricao");
             return View();
         }
 
@@ -59,7 +59,7 @@ namespace Areas.Administracao.Controllers
             }
 
             ViewBag.ConcessaoSuprimentoFundosId = new SelectList(db.ConcessoesSF, "ConcessaoSuprimentoFundosId", "Proc_Proad", detalheConcessaoAplicacaoSF.ConcessaoSuprimentoFundosId);
-            ViewBag.NaturezaDespesaId = new SelectList(db.NaturezaDespesa, "NaturezaDespesaId", "Descricao", detalheConcessaoAplicacaoSF.NaturezaDespesaId);
+            ViewBag.NaturezaDespesaId = new SelectList(db.NaturezasDespesas, "NaturezaDespesaId", "Descricao", detalheConcessaoAplicacaoSF.NaturezaDespesaId);
             return View(detalheConcessaoAplicacaoSF);
         }
 
@@ -76,7 +76,7 @@ namespace Areas.Administracao.Controllers
                 return HttpNotFound();
             }
             ViewBag.ConcessaoSuprimentoFundosId = new SelectList(db.ConcessoesSF, "ConcessaoSuprimentoFundosId", "Proc_Proad", detalheConcessaoAplicacaoSF.ConcessaoSuprimentoFundosId);
-            ViewBag.NaturezaDespesaId = new SelectList(db.NaturezaDespesa, "NaturezaDespesaId", "Descricao", detalheConcessaoAplicacaoSF.NaturezaDespesaId);
+            ViewBag.NaturezaDespesaId = new SelectList(db.NaturezasDespesas, "NaturezaDespesaId", "Descricao", detalheConcessaoAplicacaoSF.NaturezaDespesaId);
             return View(detalheConcessaoAplicacaoSF);
         }
 
@@ -94,7 +94,7 @@ namespace Areas.Administracao.Controllers
                 return RedirectToAction("Index");
             }
             ViewBag.ConcessaoSuprimentoFundosId = new SelectList(db.ConcessoesSF, "ConcessaoSuprimentoFundosId", "Proc_Proad", detalheConcessaoAplicacaoSF.ConcessaoSuprimentoFundosId);
-            ViewBag.NaturezaDespesaId = new SelectList(db.NaturezaDespesa, "NaturezaDespesaId", "Descricao", detalheConcessaoAplicacaoSF.NaturezaDespesaId);
+            ViewBag.NaturezaDespesaId = new SelectList(db.NaturezasDespesas, "NaturezaDespesaId", "Descricao", detalheConcessaoAplicacaoSF.NaturezaDespesaId);
             return View(detalheConcessaoAplicacaoSF);
         }
 

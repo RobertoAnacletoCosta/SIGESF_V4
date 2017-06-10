@@ -188,8 +188,10 @@
     <Compile Include="Areas\Administracao\Controllers\AceTemplateAdmin\TablesController.cs" />
     <Compile Include="Areas\Administracao\Controllers\AceTemplateAdmin\UIElementsController.cs" />
     <Compile Include="Areas\Administracao\Controllers\AceTemplateAdmin\WidgetsController.cs" />
+    <Compile Include="Areas\Administracao\Controllers\DetalheSolicitacaoSuprimentoFundosController.cs" />
     <Compile Include="Areas\Administracao\Controllers\HomeController.cs" />
     <Compile Include="Areas\Administracao\Controllers\RelatorioController.cs" />
+    <Compile Include="Areas\Administracao\Controllers\SolicitacaoSuprimentoFundosController.cs" />
     <Compile Include="Areas\Administracao\Extensions\HtmlRequestHelper.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Areas\Administracao\Controllers\AgenteSupridoController.cs" />
@@ -520,6 +522,16 @@
     <Content Include="Areas\Administracao\Views\Home\Usuarios.cshtml" />
     <Content Include="QuerysLinq\Query_SIGESF.linq" />
     <Content Include="Areas\Administracao\Views\Relatorio\RelatorioGeralConcessao.cshtml" />
+    <Content Include="Areas\Administracao\Views\SolicitacaoSuprimentoFundos\Create.cshtml" />
+    <Content Include="Areas\Administracao\Views\SolicitacaoSuprimentoFundos\Delete.cshtml" />
+    <Content Include="Areas\Administracao\Views\SolicitacaoSuprimentoFundos\Details.cshtml" />
+    <Content Include="Areas\Administracao\Views\SolicitacaoSuprimentoFundos\Edit.cshtml" />
+    <Content Include="Areas\Administracao\Views\SolicitacaoSuprimentoFundos\Index.cshtml" />
+    <Content Include="Areas\Administracao\Views\DetalheSolicitacaoSuprimentoFundos\Create.cshtml" />
+    <Content Include="Areas\Administracao\Views\DetalheSolicitacaoSuprimentoFundos\Delete.cshtml" />
+    <Content Include="Areas\Administracao\Views\DetalheSolicitacaoSuprimentoFundos\Details.cshtml" />
+    <Content Include="Areas\Administracao\Views\DetalheSolicitacaoSuprimentoFundos\Edit.cshtml" />
+    <Content Include="Areas\Administracao\Views\DetalheSolicitacaoSuprimentoFundos\Index.cshtml" />
     <None Include="Scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="Scripts\jquery-1.12.4.js" />
     <Content Include="Scripts\jquery-1.12.4.min.js" />

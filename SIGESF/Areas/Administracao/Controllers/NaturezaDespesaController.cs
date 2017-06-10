@@ -17,7 +17,7 @@ namespace Areas.Administracao.Controllers
         // GET: NaturezaDespesa
         public ActionResult Index()
         {
-            return View(db.NaturezaDespesa.ToList());
+            return View(db.NaturezasDespesas.ToList());
         }
 
         // GET: NaturezaDespesa/Details/5
@@ -27,7 +27,7 @@ namespace Areas.Administracao.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NaturezaDespesa naturezaDespesa = db.NaturezaDespesa.Find(id);
+            NaturezaDespesa naturezaDespesa = db.NaturezasDespesas.Find(id);
             if (naturezaDespesa == null)
             {
                 return HttpNotFound();
@@ -50,7 +50,7 @@ namespace Areas.Administracao.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.NaturezaDespesa.Add(naturezaDespesa);
+                db.NaturezasDespesas.Add(naturezaDespesa);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -65,7 +65,7 @@ namespace Areas.Administracao.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NaturezaDespesa naturezaDespesa = db.NaturezaDespesa.Find(id);
+            NaturezaDespesa naturezaDespesa = db.NaturezasDespesas.Find(id);
             if (naturezaDespesa == null)
             {
                 return HttpNotFound();
@@ -96,7 +96,7 @@ namespace Areas.Administracao.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            NaturezaDespesa naturezaDespesa = db.NaturezaDespesa.Find(id);
+            NaturezaDespesa naturezaDespesa = db.NaturezasDespesas.Find(id);
             if (naturezaDespesa == null)
             {
                 return HttpNotFound();
@@ -109,8 +109,8 @@ namespace Areas.Administracao.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            NaturezaDespesa naturezaDespesa = db.NaturezaDespesa.Find(id);
-            db.NaturezaDespesa.Remove(naturezaDespesa);
+            NaturezaDespesa naturezaDespesa = db.NaturezasDespesas.Find(id);
+            db.NaturezasDespesas.Remove(naturezaDespesa);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

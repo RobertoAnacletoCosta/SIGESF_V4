@@ -65,7 +65,7 @@ namespace SIGESF.Migrations
          //   ,DevolucaoSaque=Decimal.Parse("520,00"),ValorNaoUtilizado = Decimal.Parse("530,00") }
          //   );
 
-        context.NaturezaDespesa.AddOrUpdate(n => n.Descricao,
+        context.NaturezasDespesas.AddOrUpdate(n => n.Descricao,
             new NaturezaDespesa { Descricao = "339030 - Material de Consumo" },
             new NaturezaDespesa { Descricao = "339036 - Outros Serviços de Terceiros Pessoa Física" },
             new NaturezaDespesa { Descricao = "339039 - Outros Serviços de Terceiros Pessoa Jurídica" },

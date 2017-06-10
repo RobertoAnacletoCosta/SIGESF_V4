@@ -8,7 +8,7 @@ namespace SIGESF.Models
 {
     public class SolicitacaoSuprimentoFundos
     {
-        public int SolicitaçãoSuprimentoFundosId { get; set; }
+        public int SolicitacaoSuprimentoFundosId { get; set; }
 
         [Display(Name = "Nº Proc PROAD")]
         public string Proc_Proad { get; set; }

@@ -11,7 +11,7 @@ namespace SIGESF.Models
         [Key]
         public int DetalheSolicitacaoId { get; set; }
         public virtual SolicitacaoSuprimentoFundos SolicitacaoSuprimentoFundos { get; set; }
-        public int SolicitaçãoSuprimentoFundosId { get; set; }
+        public int SolicitacaoSuprimentoFundosId { get; set; }
         public virtual NaturezaDespesa NaturezasDespesas { get; set; }
         public int NaturezaDespesaId { get; set; }
 

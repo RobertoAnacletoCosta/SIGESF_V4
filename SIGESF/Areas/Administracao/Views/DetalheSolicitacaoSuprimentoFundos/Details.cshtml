@@ -1,0 +1,42 @@
+﻿@model SIGESF.Models.DetalheSolicitacaoSuprimentoFundos
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DetalheSolicitacaoSuprimentoFundos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NaturezasDespesas.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NaturezasDespesas.Descricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SolicitacaoSuprimentoFundos.Proc_Proad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SolicitacaoSuprimentoFundos.Proc_Proad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorSolicitado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorSolicitado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DetalheSolicitacaoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

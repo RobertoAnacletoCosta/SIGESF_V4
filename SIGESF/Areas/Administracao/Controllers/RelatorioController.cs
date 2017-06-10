@@ -20,7 +20,7 @@ namespace Areas.Administracao.Controllers
                 on c.AgenteSupridoId equals a.AgenteSupridoId
                 join d in db.DetalhesSF
                 on c.ConcessaoSuprimentoFundosId equals d.ConcessaoSuprimentoFundosId
-                join nd in db.NaturezaDespesa
+                join nd in db.NaturezasDespesas
                 on d.NaturezaDespesaId equals nd.NaturezaDespesaId
 
                 select new RelatorioGeralConcessaoViewModel
@@ -47,6 +47,19 @@ namespace Areas.Administracao.Controllers
                ).ToList();
 
             return View(ConsultaGeralConcessao);
+        }
+
+        public ActionResult RelatorioAgentesSupridos()
+        {
+
+
+            return View();
+        }
+
+        public ActionResult RelatorioSolicitacoesSF()
+        {
+
+            return View();
         }
     }
 }
