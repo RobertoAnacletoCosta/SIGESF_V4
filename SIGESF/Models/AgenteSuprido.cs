@@ -33,7 +33,7 @@ namespace SIGESF.Models
         public Unidade Unidades { get; set; }
 
         public virtual ICollection<ConcessaoSuprimentoFundos> ConcessoesSF { get; set; }
-        //public virtual ICollection<SolicitacaoSuprimentoFundos> SolicitacoesSF { get; set; }
+        public virtual ICollection<SolicitacaoSuprimentoFundos> SolicitacoesSF { get; set; }
 
     }
 }
