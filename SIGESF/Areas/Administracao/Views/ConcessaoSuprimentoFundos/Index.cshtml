@@ -4,11 +4,11 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Relação de Concessões de Suprimento de Fundos</h2>
+<h2>Manter dados  de Concessões de Suprimento de Fundos</h2>
 
-<p>
+@*<p>
     @Html.ActionLink("Nova Concessão", "Create")
-</p>
+</p>*@
 <table class="table">
     <tr>
         <th>
@@ -41,7 +41,6 @@
         <th>
             @Html.DisplayNameFor(model => model.Finalidade)
         </th>
-        <th></th>
     </tr>
 
 @foreach (var item in Model) {

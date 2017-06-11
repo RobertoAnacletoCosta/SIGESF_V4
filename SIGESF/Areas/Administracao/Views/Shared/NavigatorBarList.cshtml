@@ -4,7 +4,7 @@
     {*@
     <li class="">
         <a href="@Url.Action("Index", "Home")">
-            <i class="menu-icon fa fa-pencil"></i>
+            <i class="menu-icon fa fa-home"></i>
             <span class="menu-text"> Home </span>
         </a>
     </li>
@@ -22,9 +22,53 @@
 
         <ul class="submenu">
             <li class="">
+                <a href="@Url.Action("Create","AgenteSuprido")">
+                    <i class="menu-icon fa fa-group"></i>
+                    <span class="menu-text"> Cadastrar novo </span>
+                </a>
+            </li>
+            <li class="">
                 <a href="@Url.Action("Index","AgenteSuprido")">
                     <i class="menu-icon fa fa-group"></i>
-                    <span class="menu-text"> Cadastro Supridos </span>
+                    <span class="menu-text"> Manter Agentes Supridos </span>
+                </a>
+            </li>
+        </ul>
+    </li>
+
+    <li class="">
+        <a href="#" class="dropdown-toggle">
+            <i class="menu-icon fa fa-shopping-cart"></i>
+            <span class="menu-text"> Solicitações SF </span>
+
+            <b class="arrow fa fa-angle-down"></b>
+        </a>
+
+        <b class="arrow"></b>
+
+        <ul class="submenu">
+            <li class="">
+                <a href="@Url.Action("Create","SolicitacaoSuprimentoFundos")">
+                    <i class="menu-icon fa fa-caret-right"></i>
+                    <span class="menu-text"> Incluir Solicitação </span>
+                </a>
+            </li>
+            <li class="">
+                <a href="@Url.Action("Index","SolicitacaoSuprimentoFundos")">
+                    <i class="menu-icon fa fa-caret-right"></i>
+                    <span class="menu-text"> Manter Solicitação </span>
+                </a>
+            </li>
+            <li class="">
+                <a href="@Url.Action("Create","DetalheSolicitacaoSuprimentoFundos")">
+                    <i class="menu-icon fa fa-caret-right"></i>
+                    <span class="menu-text"> Incluir Detalhes Solicitação </span>
+                </a>
+            </li>
+            <li class="">
+                <a href="@Url.Action("Index","DetalheSolicitacaoSuprimentoFundos")">
+                    <i class="menu-icon fa fa-caret-right"></i>
+                    <span class="menu-text"> Manter Detalhes Solicitação </span>
                 </a>
             </li>
         </ul>
@@ -42,16 +86,29 @@
 
         <ul class="submenu">
             <li class="">
+                <a href="@Url.Action("Create","ConcessaoSuprimentoFundos")">
+                    <i class="menu-icon fa fa-caret-right"></i>
+                    <span class="menu-text"> Incluir nova Concessão </span>
+                </a>
+            </li>
+
+            <li class="">
                 <a href="@Url.Action("Index","ConcessaoSuprimentoFundos")">
                     <i class="menu-icon fa fa-caret-right"></i>
-                    <span class="menu-text"> Manter Concessao SF </span>
+                    <span class="menu-text"> Manter Dados de Concessão </span>
+                </a>
+            </li>
+            <li class="">
+                <a href="@Url.Action("Create","DetalheConcessaoAplicacaoSF")">
+                    <i class="menu-icon fa fa-caret-right"></i>
+                    <span class="menu-text"> Incluir Detalhes Concessão </span>
                 </a>
             </li>
 
             <li class="">
                 <a href="@Url.Action("Index","DetalheConcessaoAplicacaoSF")">
                     <i class="menu-icon fa fa-caret-right"></i>
-                    <span class="menu-text"> Manter Detalhes Concessão </span>
+                    <span class="menu-text"> Manter Detalhes de Concessão </span>
                 </a>
             </li>
         </ul>
@@ -103,7 +160,7 @@
             </li>
 
             <li class="">
-                <a href="@Url.Action("Index","SolicitacaoSuprimentoFundos")">
+                <a href="@Url.Action("RelatorioGeralSolicitacao","Relatorio")">
                     <i class="menu-icon fa fa-caret-right"></i>
                     <span class="menu-text"> Relação de Solicitações </span>
                 </a>

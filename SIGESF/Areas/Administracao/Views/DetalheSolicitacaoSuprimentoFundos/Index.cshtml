@@ -4,11 +4,11 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Manter Detalhes de Solicitação</h2>
 
-<p>
+@*<p>
     @Html.ActionLink("Create New", "Create")
-</p>
+</p>*@
 <table class="table">
     <tr>
         <th>
@@ -35,9 +35,9 @@
             @Html.DisplayFor(modelItem => item.ValorSolicitado)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.DetalheSolicitacaoId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.DetalheSolicitacaoId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.DetalheSolicitacaoId })
+            @Html.ActionLink("Atualizar", "Edit", new { id=item.DetalheSolicitacaoId }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.DetalheSolicitacaoId }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.DetalheSolicitacaoId })
         </td>
     </tr>
 }

@@ -4,16 +4,23 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2>Incluir nova Solicitação</h2>
 
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>SolicitacaoSuprimentoFundos</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.AgenteSupridoId, "Agente Suprido", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("AgenteSupridoId", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.AgenteSupridoId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        
         <div class="form-group">
             @Html.LabelFor(model => model.Proc_Proad, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -38,22 +45,36 @@
             </div>
         </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.AgenteSupridoId, "AgenteSupridoId", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("AgenteSupridoId", null, htmlAttributes: new { @class = "form-control" })
-                @Html.ValidationMessageFor(model => model.AgenteSupridoId, "", new { @class = "text-danger" })
-            </div>
-        </div>
+        
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Salvar dados de Solicitação" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Retornar", "Index")
 </div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquerymask")
+
+    <script>
+
+        $(document).ready(function () {
+
+            $("#DataSolicitacaoSF")
+                .mask("99/99/9999", { placeholder: "dd/mm/aaaa" });
+            $("#Proc_Proad").mask("999.999/9999");
+            //$("#CPF").mask("999.999.999-99");
+            //$("#CEP").mask("99999-999");
+
+        });
+
+
+    </script>
+}
