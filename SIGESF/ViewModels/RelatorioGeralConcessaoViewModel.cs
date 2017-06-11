@@ -38,8 +38,6 @@ namespace SIGESF.ViewModels
         public decimal DevolucaoSaque { get; set; }
         [Display(Name = "Valor não utilizado")]
         public decimal ValorNaoUtilizado { get; set; }
-
-
     }
     
 }

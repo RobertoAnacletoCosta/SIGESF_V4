@@ -68,10 +68,32 @@ namespace Areas.Administracao.Controllers
             return View(ConsultaGeralAgentesSupridos);
         }
 
-        public ActionResult RelatorioSolicitacoesSF()
+        public ActionResult RelatorioGeralSolicitacoes()
         {
+            var ConsultaGeralSolicitacao = (
 
-            return View();
+                from s in db.SolicitacoesSF
+                join a in db.AgentesSupridos
+                on s.AgenteSupridoId equals a.AgenteSupridoId
+                join ds in db.DetalheSolicitacoes
+                on s.SolicitacaoSuprimentoFundosId equals ds.SolicitacaoSuprimentoFundosId
+                join nd in db.NaturezasDespesas
+                on ds.NaturezaDespesaId equals nd.NaturezaDespesaId
+                orderby a.Nome
+
+                select new RelatorioGeralSolicitacoesViewModel
+                {
+                    Nome = a.Nome,
+                    PROAD = s.Proc_Proad,
+                    DataSolicitacaoSF = s.DataSolicitacaoSF,
+                    UnidadeLotacao = a.Unidades,
+                    Finalidade = s.Finalidade,
+                    NaturezaDesesa = nd.Descricao,
+                    ValorSolicitado = ds.ValorSolicitado
+                }
+               ).ToList();
+
+            return View(ConsultaGeralSolicitacao);
         }
     }
 }

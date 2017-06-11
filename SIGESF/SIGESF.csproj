@@ -225,6 +225,7 @@
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\RelatorioGeralAgentesSupridosViewModel.cs" />
     <Compile Include="ViewModels\RelatorioGeralConcessaoViewModel.cs" />
+    <Compile Include="ViewModels\RelatorioGeralSolicitacoesViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Administracao\assets\avatars\avatar.png" />
