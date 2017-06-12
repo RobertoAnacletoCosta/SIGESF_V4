@@ -1,0 +1,63 @@
+﻿@model IEnumerable<SIGESF.ViewModels.RelatorioGeralSolicitacoesViewModel>
+
+@{
+    ViewBag.Title = "RelatorioGeralSolicitacoes";
+}
+
+<h2>Relatorio Geral de Solicitacoes</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PROAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataSolicitacaoSF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Finalidade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NaturezaDesesa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorSolicitado)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PROAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataSolicitacaoSF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Finalidade)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NaturezaDesesa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValorSolicitado)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>*@
+    </tr>
+}
+
+</table>

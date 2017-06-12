@@ -535,6 +535,7 @@
     <Content Include="Areas\Administracao\Views\DetalheSolicitacaoSuprimentoFundos\Details.cshtml" />
     <Content Include="Areas\Administracao\Views\DetalheSolicitacaoSuprimentoFundos\Edit.cshtml" />
     <Content Include="Areas\Administracao\Views\DetalheSolicitacaoSuprimentoFundos\Index.cshtml" />
+    <Content Include="Areas\Administracao\Views\Relatorio\RelatorioGeralSolicitacoes.cshtml" />
     <None Include="Scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="Scripts\jquery-1.12.4.js" />
     <Content Include="Scripts\jquery-1.12.4.min.js" />
