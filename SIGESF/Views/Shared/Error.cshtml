@@ -1,9 +1,15 @@
 ﻿@model System.Web.Mvc.HandleErrorInfo
 
 @{
-    ViewBag.Title = "Error";
+    ViewBag.Title = "Servidor com problemas";
 }
 
-<h1 class="text-danger">Error.</h1>
-<h2 class="text-danger">An error occurred while processing your request.</h2>
+<hgroup class="title">
+    <h1 class="error">Servidor com problemas.</h1>
+    <h2 class="error">
+        Houve um problema em nosso servidor. <br />
+        Por favor tente novamente dentro de alguns instantes.
+    </h2>
+    <h2>Detalhes do erro: @ViewBag.DetalhesErro</h2>
+</hgroup>
 

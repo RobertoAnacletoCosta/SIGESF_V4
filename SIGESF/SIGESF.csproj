@@ -196,6 +196,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Areas\Administracao\Controllers\AgenteSupridoController.cs" />
     <Compile Include="Areas\Administracao\Controllers\ConcessaoSuprimentoFundosController.cs" />
+    <Compile Include="Controllers\ErrorPageController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Areas\Administracao\Controllers\DetalheConcessaoAplicacaoSFController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -572,6 +573,7 @@
     <Content Include="Views\ConcessaoSF\Details.cshtml" />
     <Content Include="Views\ConcessaoSF\Edit.cshtml" />
     <Content Include="Views\ConcessaoSF\Index.cshtml" />
+    <Content Include="Views\ErrorPage\NotFound.cshtml" />
     <None Include="Views\Shared\_LayoutPadrao.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

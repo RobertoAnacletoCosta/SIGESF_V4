@@ -11,7 +11,16 @@
     @*@Html.ActionLink("Adicionar novo Agente Suprido", "Create")*@
 </p>
 
-@using (Html.BeginForm("Index","AgenteSuprido",FormMethod.Get))
+@if (TempData["Mensagem"] != null)
+{
+    <p>
+        <h2>
+            @TempData["Mensagem"]
+        </h2>
+    </p>
+}
+
+@using (Html.BeginForm("Index", "AgenteSuprido", FormMethod.Get))
 {
     <p>
         Procura por Nome : @Html.TextBox("SearchString")
@@ -64,5 +73,10 @@
 </table>
 
 Pagina @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) de @Model.PageCount
-@Html.PagedListPager(Model, page => Url.Action("Index", new { page, sortOrder = ViewBag.CurrentSort
-    ,currenteFilter = ViewBag.CurrenteFilter}))
+@Html.PagedListPager(Model, page => Url.Action("Index", new
+{
+    page,
+    sortOrder = ViewBag.CurrentSort
+    ,
+    currenteFilter = ViewBag.CurrenteFilter
+}))

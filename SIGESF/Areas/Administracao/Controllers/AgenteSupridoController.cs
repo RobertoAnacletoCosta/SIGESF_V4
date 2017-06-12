@@ -16,57 +16,65 @@ namespace Areas.Administracao.Controllers
         // GET: AgenteSuprido
         public ViewResult Index(string sortOrder, string currenteFilter, string searchString, int? page)
         {
-            ViewBag.CurrentSort = sortOrder;
-            ViewBag.NomeParam = String.IsNullOrEmpty(sortOrder) ? "Nome_desc" : "";
-            ViewBag.MatriculaParam = sortOrder == "Matricula" ? "Matricula_desc" : "Matricula";
-            ViewBag.UnidadeParam = sortOrder == "Unidade" ? "Unidade_desc" : "Unidade";
-
-            if (searchString != null)
+            try
             {
-                page = 1;
+                ViewBag.CurrentSort = sortOrder;
+                ViewBag.NomeParam = String.IsNullOrEmpty(sortOrder) ? "Nome_desc" : "";
+                ViewBag.MatriculaParam = sortOrder == "Matricula" ? "Matricula_desc" : "Matricula";
+                ViewBag.UnidadeParam = sortOrder == "Unidade" ? "Unidade_desc" : "Unidade";
+
+                if (searchString != null)
+                {
+                    page = 1;
+                }
+                else
+                {
+                    searchString = currenteFilter;
+                }
+
+                ViewBag.CurrenteFilter = searchString;
+
+                var supridos = from s in db.AgentesSupridos
+                               select s;
+
+                if (!String.IsNullOrEmpty(searchString))
+                {
+                    supridos = supridos.Where(s => s.Nome.ToUpper().Contains(searchString.ToUpper())
+                                                || s.Unidades.ToString().Contains(searchString)
+                                                || s.Matricula.ToString().Contains(searchString));
+                }
+
+                switch (sortOrder)
+                {
+                    case "Nome_desc":
+                        supridos = supridos.OrderByDescending(s => s.Nome);
+                        break;
+                    case "Matricula":
+                        supridos = supridos.OrderBy(s => s.Matricula);
+                        break;
+                    case "Matricula_desc":
+                        supridos = supridos.OrderByDescending(s => s.Matricula);
+                        break;
+                    case "Unidade":
+                        supridos = supridos.OrderBy(s => s.Unidades);
+                        break;
+                    case "Unidade_desc":
+                        supridos = supridos.OrderByDescending(s => s.Unidades);
+                        break;
+                    default:
+                        supridos = supridos.OrderBy(s => s.Nome);
+                        break;
+                }
+
+                int pageSize = 5;
+                int pageNumber = (page ?? 1);
+                return View(supridos.ToPagedList(pageNumber, pageSize));
             }
-            else
+            catch(Exception err)
             {
-                searchString = currenteFilter;
+                ViewBag.DetalhesErro = err.Message.ToString();
+                return View("Error");
             }
-
-            ViewBag.CurrenteFilter = searchString;
-
-            var supridos = from s in db.AgentesSupridos
-                           select s;
-
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                supridos = supridos.Where(s => s.Nome.ToUpper().Contains(searchString.ToUpper())
-                                            || s.Unidades.ToString().Contains(searchString)
-                                            || s.Matricula.ToString().Contains(searchString));
-            }
-
-            switch (sortOrder)
-            {
-                case "Nome_desc":
-                    supridos = supridos.OrderByDescending(s => s.Nome);
-                    break;
-                case "Matricula":
-                    supridos = supridos.OrderBy(s => s.Matricula);
-                    break;
-                case "Matricula_desc":
-                    supridos = supridos.OrderByDescending(s => s.Matricula);
-                    break;
-                case "Unidade":
-                    supridos = supridos.OrderBy(s => s.Unidades);
-                    break;
-                case "Unidade_desc":
-                    supridos = supridos.OrderByDescending(s => s.Unidades);
-                    break;
-                default:
-                    supridos = supridos.OrderBy(s => s.Nome);
-                    break;
-            }
-
-            int pageSize = 5;
-            int pageNumber = (page ?? 1);
-            return View(supridos.ToPagedList(pageNumber, pageSize));
         }
 
 
@@ -98,11 +106,22 @@ namespace Areas.Administracao.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "AgenteSupridoId,Nome,Matricula,CPF,Unidades")] AgenteSuprido agenteSuprido)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.AgentesSupridos.Add(agenteSuprido);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                
+                    db.AgentesSupridos.Add(agenteSuprido);
+                    db.SaveChanges();
+                    TempData["Mensagem"] = "Cadastro efetuado com sucesso!";
+                    return RedirectToAction("Index");
+                }
+                
+            }
+            catch (Exception err)
+            {
+                ViewBag.DetalhesErro = err.Message.ToString();
+                return View("Error");
             }
 
             return View(agenteSuprido);
@@ -130,11 +149,20 @@ namespace Areas.Administracao.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "AgenteSupridoId,Nome,Matricula,CPF,Unidades")] AgenteSuprido agenteSuprido)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.Entry(agenteSuprido).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    db.Entry(agenteSuprido).State = EntityState.Modified;
+                    db.SaveChanges();
+                    TempData["Mensagem"] = "Atualizações efetuadas com sucesso!";
+                    return RedirectToAction("Index");
+                }
+            }
+            catch (Exception err)
+            {
+                ViewBag.DetalhesErro = err.Message.ToString();
+                return View("Error");
             }
             return View(agenteSuprido);
         }
@@ -159,9 +187,18 @@ namespace Areas.Administracao.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            AgenteSuprido agenteSuprido = db.AgentesSupridos.Find(id);
-            db.AgentesSupridos.Remove(agenteSuprido);
-            db.SaveChanges();
+            try
+            {
+                AgenteSuprido agenteSuprido = db.AgentesSupridos.Find(id);
+                db.AgentesSupridos.Remove(agenteSuprido);
+                db.SaveChanges();
+                TempData["Mensagem"] = "Exclusão efetuada com sucesso!";
+            }
+            catch (Exception err)
+            {
+                ViewBag.DetalhesErro = err.Message.ToString();
+                return View("Error");
+            }
             return RedirectToAction("Index");
         }
 
