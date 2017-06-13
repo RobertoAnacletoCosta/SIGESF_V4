@@ -7,7 +7,7 @@
 <h2>@ViewBag.Title</h2>
 
 
-<table class="table">
+<table class="table table-striped">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.NumSFApropriacao)
@@ -59,58 +59,59 @@
         </th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.NumSFApropriacao)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PROAD)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UnidadeLotacao)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DataConcessao)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PrazoAplicacao)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DataFinalAplicacao)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PrazoPrestContas)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PrestadoContas)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DataPrestContas)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Finalidade)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NaturezaDesesa)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ValorConcedido)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ValorAplicado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DevolucaoSaque)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ValorNaoUtilizado)
-        </td>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumSFApropriacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PROAD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UnidadeLotacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataConcessao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrazoAplicacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataFinalAplicacao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrazoPrestContas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrestadoContas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataPrestContas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Finalidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NaturezaDesesa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorConcedido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorAplicado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DevolucaoSaque)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorNaoUtilizado)
+            </td>
 
-    </tr>
-}
+        </tr>
+    }
 
 </table>
