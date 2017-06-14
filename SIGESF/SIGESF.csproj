@@ -202,11 +202,6 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Areas\Administracao\Controllers\NaturezaDespesaController.cs" />
     <Compile Include="DiagramaDeClasse\DiagramaDeClasse.cs" />
-    <Compile Include="DiagramaDeClasse\Model.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -453,10 +448,6 @@
     <Content Include="mail\contact_me.php" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="DiagramaDeClasse\Model.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <Content Include="less\agency.less" />
     <Content Include="less\mixins.less" />
     <Content Include="less\variables.less" />
