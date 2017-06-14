@@ -52,6 +52,7 @@ namespace Areas.Administracao.Controllers
             {
                 db.NaturezasDespesas.Add(naturezaDespesa);
                 db.SaveChanges();
+                TempData["Mensagem"] = "Cadastro efetuado com sucesso!";
                 return RedirectToAction("Index");
             }
 
@@ -84,6 +85,7 @@ namespace Areas.Administracao.Controllers
             {
                 db.Entry(naturezaDespesa).State = EntityState.Modified;
                 db.SaveChanges();
+                TempData["Mensagem"] = "Atualizações efetuadas com sucesso!";
                 return RedirectToAction("Index");
             }
             return View(naturezaDespesa);
@@ -112,6 +114,7 @@ namespace Areas.Administracao.Controllers
             NaturezaDespesa naturezaDespesa = db.NaturezasDespesas.Find(id);
             db.NaturezasDespesas.Remove(naturezaDespesa);
             db.SaveChanges();
+            TempData["Mensagem"] = "Exclusão efetuada com sucesso!";
             return RedirectToAction("Index");
         }
 

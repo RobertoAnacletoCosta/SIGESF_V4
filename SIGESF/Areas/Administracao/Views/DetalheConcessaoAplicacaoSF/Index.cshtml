@@ -8,6 +8,16 @@
 @*<p>
     @Html.ActionLink("Nova Concessão", "Create")
 </p>*@
+
+@if (TempData["Mensagem"] != null)
+{
+    <p>
+        <h2>
+            @TempData["Mensagem"]
+        </h2>
+    </p>
+}
+
 <table class="table">
     <tr>
         <th>

@@ -55,6 +55,7 @@ namespace Areas.Administracao.Controllers
             {
                 db.DetalhesSF.Add(detalheConcessaoAplicacaoSF);
                 db.SaveChanges();
+                TempData["Mensagem"] = "Cadastro efetuado com sucesso!";
                 return RedirectToAction("Index");
             }
 
@@ -91,6 +92,7 @@ namespace Areas.Administracao.Controllers
             {
                 db.Entry(detalheConcessaoAplicacaoSF).State = EntityState.Modified;
                 db.SaveChanges();
+                TempData["Mensagem"] = "Atualizações efetuadas com sucesso!";
                 return RedirectToAction("Index");
             }
             ViewBag.ConcessaoSuprimentoFundosId = new SelectList(db.ConcessoesSF, "ConcessaoSuprimentoFundosId", "Proc_Proad", detalheConcessaoAplicacaoSF.ConcessaoSuprimentoFundosId);
@@ -121,6 +123,7 @@ namespace Areas.Administracao.Controllers
             DetalheConcessaoAplicacaoSF detalheConcessaoAplicacaoSF = db.DetalhesSF.Find(id);
             db.DetalhesSF.Remove(detalheConcessaoAplicacaoSF);
             db.SaveChanges();
+            TempData["Mensagem"] = "Exclusão efetuada com sucesso!";
             return RedirectToAction("Index");
         }
 

@@ -9,6 +9,16 @@
 <p>
     @Html.ActionLink("Adicionar Natureza de Despeza", "Create")
 </p>
+
+@if (TempData["Mensagem"] != null)
+{
+    <p>
+        <h2>
+            @TempData["Mensagem"]
+        </h2>
+    </p>
+}
+
 <table class="table">
     <tr>
         <th>

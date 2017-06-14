@@ -54,6 +54,7 @@ namespace Areas.Administracao.Controllers
             {
                 db.SolicitacoesSF.Add(solicitacaoSuprimentoFundos);
                 db.SaveChanges();
+                TempData["Mensagem"] = "Cadastro efetuado com sucesso!";
                 return RedirectToAction("Index");
             }
 
@@ -88,6 +89,7 @@ namespace Areas.Administracao.Controllers
             {
                 db.Entry(solicitacaoSuprimentoFundos).State = EntityState.Modified;
                 db.SaveChanges();
+                TempData["Mensagem"] = "Atualizações efetuadas com sucesso!";
                 return RedirectToAction("Index");
             }
             ViewBag.AgenteSupridoId = new SelectList(db.AgentesSupridos, "AgenteSupridoId", "Nome", solicitacaoSuprimentoFundos.AgenteSupridoId);
@@ -117,6 +119,7 @@ namespace Areas.Administracao.Controllers
             SolicitacaoSuprimentoFundos solicitacaoSuprimentoFundos = db.SolicitacoesSF.Find(id);
             db.SolicitacoesSF.Remove(solicitacaoSuprimentoFundos);
             db.SaveChanges();
+            TempData["Mensagem"] = "Exclusão efetuada com sucesso!";
             return RedirectToAction("Index");
         }
 
