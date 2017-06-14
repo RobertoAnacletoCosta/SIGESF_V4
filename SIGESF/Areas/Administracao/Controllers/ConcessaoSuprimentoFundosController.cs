@@ -48,7 +48,7 @@ namespace Areas.Administracao.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ConcessaoSuprimentoFundosId,Proc_Proad,DataConcessao,SF_Apropriacao,PrazoAplicacao,DataFinalAplicacao,PrazoPrestContas,PrestadoContas,DataPrestContas,Finalidade,AgenteSupridoId")] ConcessaoSuprimentoFundos concessaoSuprimentoFundos)
+        public ActionResult Create(ConcessaoSuprimentoFundos concessaoSuprimentoFundos)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +83,7 @@ namespace Areas.Administracao.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ConcessaoSuprimentoFundosId,Proc_Proad,DataConcessao,SF_Apropriacao,PrazoAplicacao,DataFinalAplicacao,PrazoPrestContas,PrestadoContas,DataPrestContas,Finalidade,AgenteSupridoId")] ConcessaoSuprimentoFundos concessaoSuprimentoFundos)
+        public ActionResult Edit(ConcessaoSuprimentoFundos concessaoSuprimentoFundos)
         {
             if (ModelState.IsValid)
             {

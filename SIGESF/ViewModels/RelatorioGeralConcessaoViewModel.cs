@@ -25,7 +25,7 @@ namespace SIGESF.ViewModels
         [Display(Name = "Prestado contas?")]
         public Boolean PrestadoContas { get; set; }
         [Display(Name = "Data prestação contas")]
-        public DateTime DataPrestContas { get; set; }
+        public DateTime? DataPrestContas { get; set; }
         [Display(Name = "Finalidade da concessão")]
         public string Finalidade { get; set; }
         [Display(Name = "Natureza de despesa")]

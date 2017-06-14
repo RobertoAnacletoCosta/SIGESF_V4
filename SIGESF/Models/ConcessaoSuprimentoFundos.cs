@@ -15,6 +15,7 @@ namespace SIGESF.Models
         public string Proc_Proad { get; set; }
 
         [Display(Name = "Data de Concessão")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode =true)]
         public DateTime DataConcessao { get; set; }
 
         [Display(Name = "Nº SF de Apropriação")]
@@ -24,16 +25,19 @@ namespace SIGESF.Models
         public int PrazoAplicacao { get; set; }
 
         [Display(Name = "Data Final de Aplicação")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DataFinalAplicacao { get; set; }
 
         [Display(Name = "Prazo da Prestação de Contas")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime PrazoPrestContas { get; set; }
 
         [Display(Name = "Prestado Contas?")]
         public Boolean PrestadoContas { get; set; }
 
         [Display(Name = "Data Prestação de Contas")]
-        public DateTime DataPrestContas { get; set; }
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime? DataPrestContas { get; set; }
 
         [Display(Name = "Finalidade da concessão")]
         public string Finalidade { get; set; }
