@@ -14,6 +14,7 @@ namespace SIGESF.Models
         public string Proc_Proad { get; set; }
 
         [Display(Name = "Data da Solicitação")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DataSolicitacaoSF { get; set; }
 
         [Display(Name = "Finalidade da concessão")]

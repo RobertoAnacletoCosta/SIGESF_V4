@@ -15,16 +15,20 @@ namespace SIGESF.ViewModels
         [Display(Name = "Unidade")]
         public Unidade UnidadeLotacao { get; set; }
         [Display(Name = "Data de concessão")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DataConcessao { get; set; }
         [Display(Name = "Prazo aplicação em dias")]
         public int PrazoAplicacao { get; set; }
         [Display(Name = "Data final aplicação")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DataFinalAplicacao { get; set; }
         [Display(Name = "Prazo prestação de contas")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime PrazoPrestContas { get; set; }
         [Display(Name = "Prestado contas?")]
         public Boolean PrestadoContas { get; set; }
         [Display(Name = "Data prestação contas")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime? DataPrestContas { get; set; }
         [Display(Name = "Finalidade da concessão")]
         public string Finalidade { get; set; }

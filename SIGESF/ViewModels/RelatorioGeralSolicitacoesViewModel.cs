@@ -16,6 +16,7 @@ namespace SIGESF.ViewModels
         [Display(Name = "Unidade")]
         public Unidade UnidadeLotacao { get; set; }
         [Display(Name = "Data de solicitação")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DataSolicitacaoSF { get; set; }
         [Display(Name = "Finalidade da concessão")]
         public string Finalidade { get; set; }
