@@ -40,7 +40,7 @@ namespace Areas.Administracao.Controllers
                 if (!String.IsNullOrEmpty(searchString))
                 {
                     supridos = supridos.Where(s => s.Nome.ToUpper().Contains(searchString.ToUpper())
-                                                || s.Unidades.ToString().Contains(searchString)
+                                                || s.UnidadeLotacao.ToString().Contains(searchString)
                                                 || s.Matricula.ToString().Contains(searchString));
                 }
 
@@ -56,10 +56,10 @@ namespace Areas.Administracao.Controllers
                         supridos = supridos.OrderByDescending(s => s.Matricula);
                         break;
                     case "Unidade":
-                        supridos = supridos.OrderBy(s => s.Unidades);
+                        supridos = supridos.OrderBy(s => s.UnidadeLotacao);
                         break;
                     case "Unidade_desc":
-                        supridos = supridos.OrderByDescending(s => s.Unidades);
+                        supridos = supridos.OrderByDescending(s => s.UnidadeLotacao);
                         break;
                     default:
                         supridos = supridos.OrderBy(s => s.Nome);
