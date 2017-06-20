@@ -37,11 +37,11 @@ namespace SIGESF.ViewModels
         [Display(Name = "Valor concedido")]
         public decimal ValorConcedido { get; set; }
         [Display(Name = "Valor aplicado")]
-        public decimal ValorAplicado { get; set; }
+        public decimal? ValorAplicado { get; set; }
         [Display(Name = "Devolução de saque")]
-        public decimal DevolucaoSaque { get; set; }
+        public decimal? DevolucaoSaque { get; set; }
         [Display(Name = "Valor não utilizado")]
-        public decimal ValorNaoUtilizado { get; set; }
+        public decimal? ValorNaoUtilizado { get; set; }
     }
     
 }
