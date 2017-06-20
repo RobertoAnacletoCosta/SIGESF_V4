@@ -30,7 +30,7 @@ namespace Areas.Administracao.Controllers
                     NumSFApropriacao = c.SF_Apropriacao,
                     PROAD = c.Proc_Proad,
                     Nome = a.Nome,
-                    UnidadeLotacao = a.Unidades,
+                    UnidadeLotacao = a.UnidadeLotacao,
                     DataConcessao = c.DataConcessao,
                     PrazoAplicacao = c.PrazoAplicacao,
                     DataFinalAplicacao = c.DataFinalAplicacao,
@@ -61,7 +61,7 @@ namespace Areas.Administracao.Controllers
                         Nome = a.Nome,
                         Matricula = a.Matricula,
                         CPF = a.CPF,
-                        UnidadeLotacao = a.Unidades
+                        UnidadeLotacao = a.UnidadeLotacao
                     }
                     ).ToList();
 
@@ -86,7 +86,7 @@ namespace Areas.Administracao.Controllers
                     Nome = a.Nome,
                     PROAD = s.Proc_Proad,
                     DataSolicitacaoSF = s.DataSolicitacaoSF,
-                    UnidadeLotacao = a.Unidades,
+                    UnidadeLotacao = a.UnidadeLotacao,
                     Finalidade = s.Finalidade,
                     NaturezaDesesa = nd.Descricao,
                     ValorSolicitado = ds.ValorSolicitado
