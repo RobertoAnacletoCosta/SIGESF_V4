@@ -563,11 +563,6 @@
     <Content Include="vendor\jquery\jquery.js" />
     <Content Include="vendor\jquery\jquery.min.js" />
     <Content Include="Views\Home\Index - Cópia .cshtml" />
-    <Content Include="Views\ConcessaoSF\Create.cshtml" />
-    <Content Include="Views\ConcessaoSF\Delete.cshtml" />
-    <Content Include="Views\ConcessaoSF\Details.cshtml" />
-    <Content Include="Views\ConcessaoSF\Edit.cshtml" />
-    <Content Include="Views\ConcessaoSF\Index.cshtml" />
     <Content Include="Views\ErrorPage\NotFound.cshtml" />
     <None Include="Views\Shared\_LayoutPadrao.cshtml" />
     <Content Include="Web.config">
