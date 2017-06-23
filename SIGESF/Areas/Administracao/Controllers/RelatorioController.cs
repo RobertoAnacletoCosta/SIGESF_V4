@@ -79,7 +79,7 @@ namespace Areas.Administracao.Controllers
                 on s.SolicitacaoSuprimentoFundosId equals ds.SolicitacaoSuprimentoFundosId
                 join nd in db.NaturezasDespesas
                 on ds.NaturezaDespesaId equals nd.NaturezaDespesaId
-                orderby a.Nome
+                orderby s.Proc_Proad
 
                 select new RelatorioGeralSolicitacoesViewModel
                 {
