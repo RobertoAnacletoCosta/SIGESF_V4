@@ -13,7 +13,6 @@ namespace Areas.Administracao.Controllers
     {
         private ContextoEF db = new ContextoEF();
 
-        // GET: AgenteSuprido
         public ViewResult Index(string sortOrder, string currenteFilter, string searchString, int? page)
         {
             try
@@ -78,7 +77,6 @@ namespace Areas.Administracao.Controllers
         }
 
 
-        // GET: AgenteSuprido/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -93,18 +91,15 @@ namespace Areas.Administracao.Controllers
             return View(agenteSuprido);
         }
 
-        // GET: AgenteSuprido/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: AgenteSuprido/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "AgenteSupridoId,Nome,Matricula,CPF,Unidade")] AgenteSuprido agenteSuprido)
+        public ActionResult Create(AgenteSuprido agenteSuprido)
         {
             try
             {
@@ -147,7 +142,7 @@ namespace Areas.Administracao.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "AgenteSupridoId,Nome,Matricula,CPF,Unidade")] AgenteSuprido agenteSuprido)
+        public ActionResult Edit(AgenteSuprido agenteSuprido)
         {
             try
             {

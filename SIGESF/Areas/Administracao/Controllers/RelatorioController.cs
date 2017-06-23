@@ -1,5 +1,7 @@
-﻿using SIGESF.Models;
+﻿using Rotativa;
+using SIGESF.Models;
 using SIGESF.ViewModels;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -10,7 +12,86 @@ namespace Areas.Administracao.Controllers
 
         private ContextoEF db = new ContextoEF();
 
+        public ActionResult GerarRelatorioAgentesSupridos()
+        {
+            var modelo = ObterAgentesSupridos();
+
+            var pdf = new ViewAsPdf
+            {
+                ViewName = "AgentesSupridosParaImpressao",
+                Model = modelo
+            };
+
+            return pdf;
+        }
+
+        public ActionResult GerarRelatorioConcessoes()
+        {
+            var modelo = ObterConcessao();
+
+            var pdf = new ViewAsPdf
+            {
+                ViewName = "ConcessoesParaImpressao",
+                Model = modelo
+            };
+
+            return pdf;
+        }
+
+        public ActionResult GerarRelatorioSolicitacoes()
+        {
+            var modelo = ObterSolicitacoes();
+
+            var pdf = new ViewAsPdf
+            {
+                ViewName = "SolicitacoesParaImpressao",
+                Model = modelo
+            };
+
+            return pdf;
+        }
+
         public ActionResult RelatorioGeralConcessao()
+        {
+
+            var ConsultaGeralConcessao = ObterConcessao();
+
+            return View(ConsultaGeralConcessao);
+        }
+
+        public ActionResult RelatorioGeralAgentesSupridos()
+        {
+            var ConsultaGeralAgentesSupridos = ObterAgentesSupridos();
+            return View(ConsultaGeralAgentesSupridos);
+        }
+
+        public ActionResult RelatorioGeralSolicitacoes()
+        {
+            var ConsultaGeralSolicitacao = ObterSolicitacoes();
+            return View(ConsultaGeralSolicitacao);
+        }
+
+        public IEnumerable<RelatorioGeralAgentesSupridosViewModel> ObterAgentesSupridos()
+        {
+
+            var ConsultaGeralAgentesSupridos = (
+
+                    from a in db.AgentesSupridos
+
+                    select new RelatorioGeralAgentesSupridosViewModel
+                    {
+                        Nome = a.Nome,
+                        Matricula = a.Matricula,
+                        CPF = a.CPF,
+                        UnidadeLotacao = a.UnidadeLotacao
+                    }
+                    ).ToList();
+
+            return ConsultaGeralAgentesSupridos;
+
+        }
+
+        public IEnumerable<RelatorioGeralConcessaoViewModel> ObterConcessao()
         {
 
             var ConsultaGeralConcessao = (
@@ -47,29 +128,12 @@ namespace Areas.Administracao.Controllers
                 }
                ).ToList();
 
-            return View(ConsultaGeralConcessao);
+            return ConsultaGeralConcessao;
         }
 
-        public ActionResult RelatorioGeralAgentesSupridos()
+        public IEnumerable<RelatorioGeralSolicitacoesViewModel> ObterSolicitacoes()
         {
-            var ConsultaGeralAgentesSupridos = (
 
-                    from a in db.AgentesSupridos
-                    
-                    select new RelatorioGeralAgentesSupridosViewModel
-                    {
-                        Nome = a.Nome,
-                        Matricula = a.Matricula,
-                        CPF = a.CPF,
-                        UnidadeLotacao = a.UnidadeLotacao
-                    }
-                    ).ToList();
-
-            return View(ConsultaGeralAgentesSupridos);
-        }
-
-        public ActionResult RelatorioGeralSolicitacoes()
-        {
             var ConsultaGeralSolicitacao = (
 
                 from s in db.SolicitacoesSF
@@ -93,7 +157,7 @@ namespace Areas.Administracao.Controllers
                 }
                ).ToList();
 
-            return View(ConsultaGeralSolicitacao);
+            return ConsultaGeralSolicitacao;
         }
     }
 }

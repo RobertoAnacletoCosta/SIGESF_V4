@@ -48,7 +48,7 @@ namespace Areas.Administracao.Controllers
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "SolicitacaoSuprimentoFundosId,Proc_Proad,DataSolicitacaoSF,Finalidade,AgenteSupridoId")] SolicitacaoSuprimentoFundos solicitacaoSuprimentoFundos)
+        public ActionResult Create(SolicitacaoSuprimentoFundos solicitacaoSuprimentoFundos)
         {
             if (ModelState.IsValid)
             {
@@ -78,12 +78,9 @@ namespace Areas.Administracao.Controllers
             return View(solicitacaoSuprimentoFundos);
         }
 
-        // POST: Administracao/SolicitacaoSuprimentoFundos/Edit/5
-        // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
-        // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "SolicitacaoSuprimentoFundosId,Proc_Proad,DataSolicitacaoSF,Finalidade,AgenteSupridoId")] SolicitacaoSuprimentoFundos solicitacaoSuprimentoFundos)
+        public ActionResult Edit(SolicitacaoSuprimentoFundos solicitacaoSuprimentoFundos)
         {
             if (ModelState.IsValid)
             {

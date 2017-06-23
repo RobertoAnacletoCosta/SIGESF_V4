@@ -532,6 +532,10 @@
     <Content Include="Areas\Administracao\Views\DetalheSolicitacaoSuprimentoFundos\Edit.cshtml" />
     <Content Include="Areas\Administracao\Views\DetalheSolicitacaoSuprimentoFundos\Index.cshtml" />
     <Content Include="Areas\Administracao\Views\Relatorio\RelatorioGeralSolicitacoes.cshtml" />
+    <Content Include="Areas\Administracao\Views\Relatorio\AgentesSupridosParaImpressao.cshtml" />
+    <Content Include="App_Browsers\qt.browser" />
+    <Content Include="Areas\Administracao\Views\Relatorio\ConcessoesParaImpressao.cshtml" />
+    <Content Include="Areas\Administracao\Views\Relatorio\SolicitacoesParaImpressao.cshtml" />
     <None Include="Scripts\jquery-1.12.4.intellisense.js" />
     <Content Include="Scripts\jquery-1.12.4.js" />
     <Content Include="Scripts\jquery-1.12.4.min.js" />
@@ -659,7 +663,6 @@
     <Content Include="vendor\font-awesome\scss\_variables.scss" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Browsers\" />
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Administracao\Models\" />
   </ItemGroup>

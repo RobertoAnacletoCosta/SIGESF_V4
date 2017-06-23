@@ -41,12 +41,9 @@ namespace Areas.Administracao.Controllers
             return View();
         }
 
-        // POST: NaturezaDespesa/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "NaturezaDespesaId,CodigoDespesa,Descricao")] NaturezaDespesa naturezaDespesa)
+        public ActionResult Create(NaturezaDespesa naturezaDespesa)
         {
             if (ModelState.IsValid)
             {
@@ -74,12 +71,10 @@ namespace Areas.Administracao.Controllers
             return View(naturezaDespesa);
         }
 
-        // POST: NaturezaDespesa/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+  
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "NaturezaDespesaId,CodigoDespesa,Descricao")] NaturezaDespesa naturezaDespesa)
+        public ActionResult Edit(NaturezaDespesa naturezaDespesa)
         {
             if (ModelState.IsValid)
             {
