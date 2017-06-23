@@ -7,7 +7,7 @@
 <h2>Manter Solicitações</h2>
 
 <p>
-    @*@Html.ActionLink("Create New", "Create")*@
+    @Html.ActionLink("Nova solicitação", "Create")
 </p>
 
 @if (TempData["Mensagem"] != null)
@@ -36,26 +36,32 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.AgenteSuprido.Nome)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Proc_Proad)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DataSolicitacaoSF)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Finalidade)
-        </td>
-        <td>
-            @Html.ActionLink("Atualizar", "Edit", new { id=item.SolicitacaoSuprimentoFundosId }) |
-            @Html.ActionLink("Detalhes", "Details", new { id=item.SolicitacaoSuprimentoFundosId }) |
-            @Html.ActionLink("Excluir", "Delete", new { id=item.SolicitacaoSuprimentoFundosId })
-        </td>
-    </tr>
-}
-
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AgenteSuprido.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Proc_Proad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataSolicitacaoSF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Finalidade)
+            </td>
+            <td>
+                @Html.ActionLink("Atualizar", "Edit", new { id = item.SolicitacaoSuprimentoFundosId }) |
+                @Html.ActionLink("Detalhes", "Details", new { id = item.SolicitacaoSuprimentoFundosId }) |
+                @Html.ActionLink("Excluir", "Delete", new { id = item.SolicitacaoSuprimentoFundosId })
+            </td>
+        </tr>
+    }
 </table>
+<div class="btn btn-default">
+    <a href="@Url.Action("Create","DetalheSolicitacaoSuprimentoFundos")">
+        <span class="menu-text"> Incluir Detalhes Solicitação </span>
+    </a>
+
+</div>
