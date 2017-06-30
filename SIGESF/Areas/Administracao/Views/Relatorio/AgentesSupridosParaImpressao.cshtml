@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SIGESF.ViewModels.RelatorioGeralAgentesSupridosViewModel>
+﻿@model List<SIGESF.ViewModels.RelatorioGeralAgentesSupridosViewModel>
 
 @{
     ViewBag.Title = "Relatório Geral de Agentes Supridos";
@@ -9,16 +9,16 @@
 <table class="table table-striped table-hover">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Nome)
+            @Html.Display("Nome")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Matricula)
+            @Html.Display("Matricula")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CPF)
+            @Html.Display("CPF")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.UnidadeLotacao)
+            @Html.Display("UnidadeLotacao")
         </th>
     </tr>
 

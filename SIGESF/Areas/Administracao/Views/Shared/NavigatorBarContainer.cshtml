@@ -268,7 +268,7 @@
             </li>
 
             <li class="light-blue">
-                <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                @*<a data-toggle="dropdown" href="#" class="dropdown-toggle">
                     <img class="nav-user-photo" src="~/Areas/Administracao/assets/avatars/user.jpg" alt="Jason's Photo" />
                     <span class="user-info">
                         <small>Bem vindo,</small>
@@ -276,8 +276,8 @@
                     </span>
 
                     <i class="ace-icon fa fa-caret-down"></i>
-                </a>
-
+                </a>*@
+                @Html.Partial("_LoginPartial")
                 <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
                     <li>
                         <a href="#">

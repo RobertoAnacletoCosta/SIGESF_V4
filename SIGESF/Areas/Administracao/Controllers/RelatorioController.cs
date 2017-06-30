@@ -12,7 +12,8 @@ namespace Areas.Administracao.Controllers
 
         private ContextoEF db = new ContextoEF();
 
-        public ActionResult GerarRelatorioAgentesSupridos()
+
+            public ActionResult GerarRelatorioAgentesSupridos()
         {
             var modelo = ObterAgentesSupridos();
 
