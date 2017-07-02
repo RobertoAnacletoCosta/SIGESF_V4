@@ -13,7 +13,20 @@ namespace Areas.Administracao.Controllers
         private ContextoEF db = new ContextoEF();
 
 
-            public ActionResult GerarRelatorioAgentesSupridos()
+        public ActionResult PDFPadrao()
+        {
+
+            var modelo = new RelatorioGeralAgentesSupridosViewModel { Matricula = "1212", CPF= "121212" };
+            var pdf = new ViewAsPdf
+            {
+                ViewName = "AgentesSupridosParaImpressao",
+                Model = modelo
+            };
+            return pdf;
+        }
+
+
+        public ActionResult GerarRelatorioAgentesSupridos()
         {
             var modelo = ObterAgentesSupridos();
 
